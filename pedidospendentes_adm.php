@@ -18,11 +18,9 @@
 
             <a class="ME" href="pedidospendentes_adm.php"><b>USUÁRIOS</b></a>
                 
-            <a class="ME" href="ADM/pedidos.php"><b>PEDIDOS</b></a>
+            <a class="ME" href="ADM/avaliacao.php"><b>AVALIAÇÃO</b></a>
         
             <a class="ME" href="ADM/precos.php"><b>PRODUTOS</b></a>
-            
-            <a class="ME" href="ADM/funcionarios.php"><b>FUNCIONÁRIOS</b></a>
     </div>
     <div class="prin">
         <div class="tabela">

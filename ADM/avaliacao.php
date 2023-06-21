@@ -19,20 +19,34 @@
             
     <a class="ME" href="../pedidospendentes_adm.php"><b>USUÁRIOS</b></a>
                 
-    <a class="ME" href="pedidos.php"><b>AVALIAÇÃO</b></a>
+    <a class="ME" href="avaliacao.php"><b>AVALIAÇÃO</b></a>
 
     <a class="ME" href="precos.php"><b>PRODUTOS</b></a>
     
-    <a class="ME" href="funcionarios.php"><b>FUNCIONÁRIOS</b></a>
 
     </div>
     <div class="prin">
         <div class="tabela">
-         <B>NOSSOS PEDIDOS 🧁</B> <br>
+         <B>NOSSAS AVALIAÇÕES ⭐</B> <br>
         <table class="tabelinha">
             <thead>
                 <tr>
-                    <th class="verde">EMAIL DO USUÁRIO</th>
-                    <th class="verde">PEDIDO DO USUÁRIO</th>
+                    <th class="verde">NOTAS DA AVALIAÇÃO</th>
                 </tr>
             </thead>
+            <?php
+                include("../conecta.php"); //conecta com o banco de dados
+                $comando = $pdo->prepare("SELECT * FROM avaliacao");
+                $resultado = $comando->execute();
+        
+                while( $linhas = $comando->fetch()){
+                    $nota = $linhas["nota"];
+                    
+                    echo("
+                        <tr>
+                        <td class='verde'>$nota</td>
+                        </tr>
+                    ");
+                }
+            
+            ?>
